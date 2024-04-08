@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/DailyDrive"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Daily Drive"
+        android:textAlignment="center"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/dailyScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="clip_horizontal|center"
+                android:text="@string/dailyScore"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageDailyScore"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:src="@drawable/dailyscoreimage" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/coinAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:text="@string/coinAmount"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageCoin"
+                android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"/>
+            <!--                android:src="@tools:sample/avatars"-->
+            <!--                app:srcCompat="@drawable/coinimage" />-->
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Your ImageView -->
+        <ImageView
+            android:id="@+id/yourImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/c8" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Guess the car:"
+            android:textAlignment="center"
+            android:textSize="40sp" />
+
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+        <!-- First Image -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/mainmenucarimage" />
+
+        </FrameLayout>
+
+        <!-- Second Image -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/leaderboardimage" />
+        </FrameLayout>
+
+        <!-- Third Image -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/coinimage" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

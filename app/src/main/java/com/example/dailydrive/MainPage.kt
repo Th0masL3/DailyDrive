@@ -2,9 +2,6 @@ package com.example.dailydrive
 
 import android.widget.Button
 import androidx.activity.OnBackPressedCallback
-
-package com.example.dailydrive
-
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -30,7 +27,7 @@ class MainPage : Fragment() {
 
         //leaderboard.setOnClickListener { switchFragment(LeaderBoardFrag()) }
         //Gamestore.setOnClickListener { switchFragment(StoreFrag()) }
-        Game1.setOnClickListener { switchFragment(Game1Frag()) }
+        Game1.setOnClickListener { switchFragment(GamePage()) }
         //Game2.setOnClickListener { switchFragment(Game2Frag()) }
         //Game3.setOnClickListener { switchFragment(Game3Frag()) }
         //Game4.setOnClickListener { switchFragment(Game4Frag()) }
@@ -48,7 +45,7 @@ class MainPage : Fragment() {
     // Method to switch fragments
     private fun switchFragment(fragment: Fragment) {
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
+            .replace(R.id.game1, fragment)
             .addToBackStack(null)
             .commit()
     }

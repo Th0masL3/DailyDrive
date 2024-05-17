@@ -13,8 +13,8 @@
         android:theme="@style/Theme.DailyDrive"
         tools:targetApi="31">
         <activity
-            android:name=".MainPage"
-            android:exported="false"
+            android:name=".MainActivity"
+            android:exported="true"
             android:label="@string/fragment_main_page"
             android:theme="@style/Theme.DailyDrive">
             <intent-filter>

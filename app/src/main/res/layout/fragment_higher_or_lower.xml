@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/GamePage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/DailyDrive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daily Drive"
+        android:textAlignment="center"
+        android:textSize="40sp" />
+
+
+    <ImageView
+        android:id="@+id/yourImageView"
+        android:layout_width="match_parent"
+        android:layout_height="393dp"
+        android:src="@drawable/lambo1" />
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:text="Is the price higher or lower than: 450 000$"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/answerButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Higher" />
+
+    <Button
+        android:id="@+id/answerButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lower" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+</LinearLayout>

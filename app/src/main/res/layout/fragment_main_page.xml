@@ -82,7 +82,7 @@
             android:id="@+id/DailyChallenge"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Daily Challenge"
+            android:text="Guess the Car lvl1"
             android:textAlignment="center"
             android:textSize="28sp" />
 
@@ -93,12 +93,12 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/HigherLower"
+            android:id="@+id/Level2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Higher or Lower"
+            android:text="Guess the car lvl2"
             android:textAlignment="center"
-            android:textSize="25sp" />
+            android:textSize="28sp" />
     </FrameLayout>
 
     <FrameLayout
@@ -106,25 +106,17 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/ClassicBrands"
+            android:id="@+id/HigherOrLower"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Classic: Brands"
+            android:text="Higher or Lower?"
             android:textAlignment="center"
-            android:textSize="25sp" />
+            android:textSize="28sp" />
     </FrameLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/ClassicCars"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Classic: Cars"
-            android:textAlignment="center"
-            android:textSize="25sp" />
     </FrameLayout>
 
 

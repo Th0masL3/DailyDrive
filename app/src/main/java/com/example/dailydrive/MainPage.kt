@@ -11,27 +11,18 @@ import androidx.fragment.app.Fragment
 class MainPage : Fragment() {
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_main_page, container, false)
 
-        //val leaderboard: Button = view.findViewById(R.id.leaderboard)
-        //val Gamestore: Button = view.findViewById(R.id.store)
-        val Game1: Button = view.findViewById(R.id.DailyChallenge)
-        //val Game2: Button = view.findViewById(R.id.game2)
-        //val Game3: Button = view.findViewById(R.id.game3)
-        //val Game4: Button = view.findViewById(R.id.game4)
+        val game1Button: Button = view.findViewById(R.id.DailyChallenge)
+        val game2Button: Button = view.findViewById(R.id.Level2)
+        // Optional: Additional game buttons can be initialized here.
 
-
-        //leaderboard.setOnClickListener { switchFragment(LeaderBoardFrag()) }
-        //Gamestore.setOnClickListener { switchFragment(StoreFrag()) }
-        Game1.setOnClickListener { switchFragment(GamePage()) }
-        //Game2.setOnClickListener { switchFragment(Game2Frag()) }
-        //Game3.setOnClickListener { switchFragment(Game3Frag()) }
-        //Game4.setOnClickListener { switchFragment(Game4Frag()) }
-
+        game1Button.setOnClickListener { switchFragment(GamePage()) }
+        game2Button.setOnClickListener { switchFragment(GamePage2()) }
+        // Set up other buttons if necessary.
 
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
@@ -42,10 +33,10 @@ class MainPage : Fragment() {
         return view
     }
 
-    // Method to switch fragments
+    // Method to switch fragments dynamically based on the button clicked
     private fun switchFragment(fragment: Fragment) {
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, GamePage())
+            .replace(R.id.fragment_container, fragment)
             .addToBackStack(null)
             .commit()
     }

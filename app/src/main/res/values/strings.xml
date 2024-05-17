@@ -3,6 +3,9 @@
     <string name="fragment_main_page">Main Page</string>
     <string name="dailyScore">Daily Score</string>
     <string name="coinAmount">Coin Amount</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- Questions and answers for the first game page -->
     <string name="question_1">What is this car?</string>
     <string-array name="answers_1">
         <item>Honda Civic</item>
@@ -10,6 +13,15 @@
         <item>Corvette C8</item>
         <item>Lamborghini Huracan</item>
     </string-array>
-    <integer name="correct_answer_1">1</integer>
-    <string name="title_activity_main">MainActivity</string>
+    <integer name="correct_answer_1">2</integer> <!-- Assuming correct answer is the second item -->
+
+    <!-- Questions and answers for the second game page (GamePage2) -->
+    <string name="question2_1">Guess the car:</string> <!-- Updated to use consistent naming with other questions -->
+    <string-array name="answers2_1"> <!-- Updated to consistent naming and real car names as per your XML layout -->
+        <item>Kia EV6</item>
+        <item>Chevrolet Camaro</item>
+        <item>Subaru Crosstrek</item>
+        <item>Honda Civic</item>
+    </string-array>
+    <integer name="correct_answer2_1">2</integer> <!-- Assuming 'Chevrolet Camaro' is the correct answer -->
 </resources>

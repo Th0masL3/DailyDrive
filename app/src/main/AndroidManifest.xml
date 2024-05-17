@@ -15,7 +15,7 @@
         <activity
             android:name=".MainPage"
             android:exported="false"
-            android:label="@string/title_activity_main"
+            android:label="@string/fragment_main_page"
             android:theme="@style/Theme.DailyDrive">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

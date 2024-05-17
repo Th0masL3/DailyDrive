@@ -2,136 +2,103 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/DailyDrive"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="Daily Drive"
         android:textAlignment="center"
         android:textSize="40sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50sp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <FrameLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageDailyScore"
+                android:layout_width="50sp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"/>
 
             <TextView
                 android:id="@+id/dailyScore"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="clip_horizontal|center"
-                android:text="@string/dailyScore"
+                android:layout_gravity="end|center_vertical"
                 android:textSize="20sp" />
-
-            <ImageView
-                android:id="@+id/imageDailyScore"
-                android:layout_width="50sp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:src="@drawable/dailyscoreimage" />
         </FrameLayout>
 
         <FrameLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_gravity="right"
             android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/coinAmount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:text="@string/coinAmount"
-                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/imageCoin"
                 android:layout_width="50sp"
                 android:layout_height="match_parent"
-                android:layout_gravity="right"/>
-            <!--                android:src="@tools:sample/avatars"-->
-            <!--                app:srcCompat="@drawable/coinimage" />-->
-        </FrameLayout>
+                android:layout_gravity="end"/>
 
+            <TextView
+                android:id="@+id/coinAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:textSize="20sp" />
+        </FrameLayout>
     </LinearLayout>
 
-    <FrameLayout
+    <ImageView
+        android:id="@+id/yourImageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:src="@drawable/c8" />
 
-        <!-- Your ImageView -->
-        <ImageView
-            android:id="@+id/yourImageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/c8" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Guess the car:"
-            android:textAlignment="center"
-            android:textSize="40sp" />
-
-
-
-    </FrameLayout>
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/questionTextView"
         android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:layout_weight="3"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:text="Guess the car:"
+        android:textAlignment="center"
+        android:textSize="24sp" />
 
-        <!-- First Image -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="left"
-            android:layout_weight="1">
+    <Button
+        android:id="@+id/answerButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Honda Civic" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/mainmenucarimage" />
+    <Button
+        android:id="@+id/answerButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ferrari F430 Spider" />
 
-        </FrameLayout>
+    <Button
+        android:id="@+id/answerButton3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Corvette C8" />
 
-        <!-- Second Image -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+    <Button
+        android:id="@+id/answerButton4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lamborghini Huracan" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/leaderboardimage" />
-        </FrameLayout>
-
-        <!-- Third Image -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/coinimage" />
-        </FrameLayout>
-    </LinearLayout>
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
 </LinearLayout>

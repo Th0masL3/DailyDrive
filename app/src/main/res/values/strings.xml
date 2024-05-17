@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">Daily Drive</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="dailyScore">8</string>
-    <string name="coinAmount">125</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_main_activity">Main Activity</string>
+    <string name="dailyScore">Daily Score</string>
+    <string name="coinAmount">Coin Amount</string>
+    <string name="question_1">What is this car?</string>
+    <string-array name="answers_1">
+        <item>Honda Civic</item>
+        <item>Ferrari F430 Spider</item>
+        <item>Corvette C8</item>
+        <item>Lamborghini Huracan</item>
+    </string-array>
+    <integer name="correct_answer_1">1</integer>
 </resources>

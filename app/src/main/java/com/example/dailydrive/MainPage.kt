@@ -1,60 +1,55 @@
 package com.example.dailydrive
 
+import android.widget.Button
+import androidx.activity.OnBackPressedCallback
+
+package com.example.dailydrive
+
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MainPage.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MainPage : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_activity, container, false)
+        val view = inflater.inflate(R.layout.fragment_main_page, container, false)
+
+        //val leaderboard: Button = view.findViewById(R.id.leaderboard)
+        //val Gamestore: Button = view.findViewById(R.id.store)
+        val Game1: Button = view.findViewById(R.id.game1)
+        //val Game2: Button = view.findViewById(R.id.game2)
+        //val Game3: Button = view.findViewById(R.id.game3)
+        //val Game4: Button = view.findViewById(R.id.game4)
+
+
+        //leaderboard.setOnClickListener { switchFragment(LeaderBoardFrag()) }
+        //Gamestore.setOnClickListener { switchFragment(StoreFrag()) }
+        Game1.setOnClickListener { switchFragment(Game1Frag()) }
+        //Game2.setOnClickListener { switchFragment(Game2Frag()) }
+        //Game3.setOnClickListener { switchFragment(Game3Frag()) }
+        //Game4.setOnClickListener { switchFragment(Game4Frag()) }
+
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                requireActivity().supportFragmentManager.popBackStack()
+            }
+        })
+
+        return view
     }
 
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MainActivity.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MainPage().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    // Method to switch fragments
+    private fun switchFragment(fragment: Fragment) {
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }

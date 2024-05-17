@@ -77,7 +77,7 @@
         android:layout_width="match_parent"
         android:layout_height="50sp">
 
-        <TextView
+        <Button
             android:id="@+id/DailyChallenge"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -91,7 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <Button
             android:id="@+id/HigherLower"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -104,7 +104,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <Button
             android:id="@+id/ClassicBrands"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -117,7 +117,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <Button
             android:id="@+id/ClassicCars"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -132,20 +132,6 @@
         android:layout_height="50sp"
         android:layout_weight="3"
         android:orientation="horizontal">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="left"
-            android:layout_weight="1">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/mainmenucarimage" />
-
-        </FrameLayout>
 
         <FrameLayout
             android:layout_width="match_parent"

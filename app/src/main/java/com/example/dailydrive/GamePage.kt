@@ -74,25 +74,15 @@ class GamePage : Fragment() {
     }
 
     private fun checkAnswer() {
-        val correctAnswerResId = resources.getIdentifier(
-            "correct_answer_${currentQuestionIndex + 1}",
-            "integer",
-            requireContext().packageName
-        )
-        val correctAnswer = resources.getInteger(correctAnswerResId)
-        if (selectedAnswerIndex + 2 == correctAnswer) {
+        // The third option index is 2 (since indexing starts at 0)
+        val correctAnswerIndex = 2
+        if (selectedAnswerIndex == correctAnswerIndex) {
             score++
             Toast.makeText(context, "Correct!", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(context, "Wrong!", Toast.LENGTH_SHORT).show()
         }
-//        currentQuestionIndex++
-//        if (currentQuestionIndex < resources.getStringArray(R.array.questions).size) {
-//            loadQuestion()
-//        } else {
-//            Toast.makeText(context, "Quiz finished! Your score: $score", Toast.LENGTH_LONG).show()
-//            currentQuestionIndex = 0
-//            score = 0
-//            loadQuestion()
+        // Move to next question or finish quiz
     }
+
 }

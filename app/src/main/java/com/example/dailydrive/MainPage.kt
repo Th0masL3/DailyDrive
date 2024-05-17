@@ -45,7 +45,7 @@ class MainPage : Fragment() {
     // Method to switch fragments
     private fun switchFragment(fragment: Fragment) {
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.GamePage, fragment)
+            .replace(R.id.fragment_container, GamePage())
             .addToBackStack(null)
             .commit()
     }

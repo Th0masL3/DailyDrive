@@ -19,7 +19,7 @@ class MainPage : Fragment() {
 
         //val leaderboard: Button = view.findViewById(R.id.leaderboard)
         //val Gamestore: Button = view.findViewById(R.id.store)
-        val Game1: Button = view.findViewById(R.id.game1)
+        val Game1: Button = view.findViewById(R.id.DailyChallenge)
         //val Game2: Button = view.findViewById(R.id.game2)
         //val Game3: Button = view.findViewById(R.id.game3)
         //val Game4: Button = view.findViewById(R.id.game4)
@@ -45,7 +45,7 @@ class MainPage : Fragment() {
     // Method to switch fragments
     private fun switchFragment(fragment: Fragment) {
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.game1, fragment)
+            .replace(R.id.GamePage, fragment)
             .addToBackStack(null)
             .commit()
     }

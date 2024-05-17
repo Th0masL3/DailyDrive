@@ -18,10 +18,11 @@ class MainPage : Fragment() {
 
         val game1Button: Button = view.findViewById(R.id.DailyChallenge)
         val game2Button: Button = view.findViewById(R.id.Level2)
-        // Optional: Additional game buttons can be initialized here.
+        val game3Button: Button = view.findViewById(R.id.GuessTheBrand)
 
         game1Button.setOnClickListener { switchFragment(GamePage()) }
         game2Button.setOnClickListener { switchFragment(GamePage2()) }
+        game3Button.setOnClickListener { switchFragment(GuessTheBrand()) }
         // Set up other buttons if necessary.
 
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {

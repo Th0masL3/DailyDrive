@@ -1,0 +1,12 @@
+--USE `cars-db`;
+--
+--CREATE TABLE IF NOT EXISTS cars (
+--    carId VARCHAR(36) PRIMARY KEY,
+--    carImage VARCHAR(100),
+--    carCompany VARCHAR(100),
+--    carModel VARCHAR(100),
+--    releaseYear INTEGER,
+--    carTopSpeed INTEGER,
+--    acceleration0To100Kmh REAL,
+--    carMsrp REAL
+--);

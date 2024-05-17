@@ -1,0 +1,9 @@
+--USE `user_scores-db`;
+--
+--CREATE TABLE IF NOT EXISTS user_scores (
+--    userId INTEGER,
+--    gameMode VARCHAR(50),
+--    highScore INTEGER,
+--    date DATE,
+--    PRIMARY KEY (userId, gameMode)
+--);

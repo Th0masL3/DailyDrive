@@ -80,7 +80,7 @@ class GamePage : Fragment() {
             requireContext().packageName
         )
         val correctAnswer = resources.getInteger(correctAnswerResId)
-        if (selectedAnswerIndex + 1 == correctAnswer) {
+        if (selectedAnswerIndex + 2 == correctAnswer) {
             score++
             Toast.makeText(context, "Correct!", Toast.LENGTH_SHORT).show()
         } else {

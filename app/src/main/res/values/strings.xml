@@ -11,4 +11,5 @@
         <item>Lamborghini Huracan</item>
     </string-array>
     <integer name="correct_answer_1">1</integer>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

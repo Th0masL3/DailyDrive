@@ -1,59 +1,60 @@
 package com.example.dailydrive
 
 import android.os.Bundle
+import android.widget.Button
+import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MainActivity.newInstance] factory method to
- * create an instance of this fragment.
- */
-class MainActivity : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+        setContentView(R.layout.fragment_main_activity)
+
+        // Display the first fragment when the app starts
+        if (savedInstanceState == null) {
+            switchFragment(FirstFragment())
         }
-    }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_activity, container, false)
-    }
+        // Set up button listeners for each fragment
+        val buttonFragment1: Button = findViewById(R.id.button_fragment1)
+        val buttonFragment2: Button = findViewById(R.id.button_fragment2)
+        val buttonFragment3: Button = findViewById(R.id.button_fragment3)
+        val buttonFragment4: Button = findViewById(R.id.button_fragment4)
+        val buttonFragment5: Button = findViewById(R.id.button_fragment5)
+        val buttonFragment6: Button = findViewById(R.id.button_fragment6)
+        val buttonFragment7: Button = findViewById(R.id.button_fragment7)
+        val buttonBack: Button = findViewById(R.id.button_back)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MainActivity.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MainActivity().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        buttonFragment1.setOnClickListener { switchFragment(FirstFragment()) }
+        buttonFragment2.setOnClickListener { switchFragment(SecondFragment()) }
+        buttonFragment3.setOnClickListener { switchFragment(thirdFragment()) }
+        buttonFragment4.setOnClickListener { switchFragment(FourthFragment()) }
+        buttonFragment5.setOnClickListener { switchFragment(FifthFragment()) }
+        buttonFragment6.setOnClickListener { switchFragment(sixthFragment()) }
+        buttonFragment7.setOnClickListener { switchFragment(sevenFragment()) }
+
+        // Set up back button listener
+        buttonBack.setOnClickListener { onBackPressedDispatcher.onBackPressed() }
+
+        // Handle the back press using OnBackPressedDispatcher
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (supportFragmentManager.backStackEntryCount > 0) {
+                    supportFragmentManager.popBackStack()
+                } else {
+                    finish() // Close the activity if no fragments are in the back stack
                 }
             }
+        })
+    }
+
+    // Method to switch fragments
+    private fun switchFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .addToBackStack(null)
+            .commit()
     }
 }

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -65,15 +67,6 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/GameModes"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="0sp"
-        android:text="Game Modes"
-        android:textAlignment="textEnd"
-        android:textSize="35sp" />
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -89,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Daily Challenge"
-            android:textAlignment="textEnd"
+            android:textAlignment="center"
             android:textSize="28sp" />
 
     </FrameLayout>
@@ -103,7 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Higher or Lower"
-            android:textAlignment="textEnd"
+            android:textAlignment="center"
             android:textSize="25sp" />
     </FrameLayout>
 
@@ -116,7 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Classic: Brands"
-            android:textAlignment="textEnd"
+            android:textAlignment="center"
             android:textSize="25sp" />
     </FrameLayout>
 
@@ -129,7 +122,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Classic: Cars"
-            android:textAlignment="textEnd"
+            android:textAlignment="center"
             android:textSize="25sp" />
     </FrameLayout>
 
